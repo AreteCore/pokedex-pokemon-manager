@@ -1,0 +1,27 @@
+{
+  "name": "pokedex-pokemon-manager",
+  "version": "1.0.0",
+  "description": "An express-driven Pokemon Pokedex. Practice with the REST API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AreteCore/pokedex-pokemon-manager.git"
+  },
+  "keywords": [
+    "pokemon",
+    "rest",
+    "api",
+    "express",
+    "node"
+  ],
+  "author": "Richard Clarke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AreteCore/pokedex-pokemon-manager/issues"
+  },
+  "homepage": "https://github.com/AreteCore/pokedex-pokemon-manager#readme"
+}
