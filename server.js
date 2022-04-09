@@ -17,6 +17,11 @@ const PORT = process.env.PORT || 3001
 const pokedex = require('./models/pokedex.js')
 
 //middleware goes here
+app.use(express.urlencoded({
+    extended:false
+})) //parses the request out of the url into something express understands
+app.use(morgan("tiny")) //morgan server logging
+app.use("/static", express.static("public")) //enables use of public folders
 
 //middleware end
 
