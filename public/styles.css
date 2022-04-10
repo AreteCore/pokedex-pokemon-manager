@@ -1,3 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --tilesize: 20vw;
+    height: 
+}
+
 body {
-    background-color:slategrey
+    background-color:slategrey;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+img {
+    max-width: calc(var(--tilesize) / 2);
+    max-height: calc(var(--tilesize) / 2);
+    /* display:none; */
+}
+.gbc {
+    width: var(--tilesize);
+    height: var(--tilesize);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: .5px solid black;
+    box-shadow: 1px 1px  5px black;
+    background-image: url("/static/gbc.png");
+    background-size:cover;
+    position:absolute;
+}
+.titlebar {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 90vw
+}
+
+.display {
+    display:flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.tile {
+    width: var(--tilesize);
+    height: var(--tilesize);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    border: .5px solid black;
+    box-shadow: 1px 1px  5px black;
+    /* background-image: url("https://cdn.vox-cdn.com/thumbor/2qhGlFjBRJGLjTj6FoMk_hLAT5E=/0x0:1440x812/920x613/filters:focal(662x264:892x494):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55111827/pokemon_gold.0.jpg");
+    background-size: 150px;
+    background-repeat: no-repeat; */
+    
+}
+
+.pokemon-name {
+    position: absolute;
+    font-weight:bold;
+    /* left:10; */
+    /* top: 10; */
+    color: white;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    top: 82%;
+    font-family: 'VT323', monospace;
+
 }

@@ -1,1 +1,23 @@
-pokemon go here
+<!DOCTYPE html>
+<html lang="en">
+    <!-- this line includes the head boilerplate, unified css and js -->
+    <%- include('partials/head.ejs') %>
+<body>
+    <div class="titlebar">
+        <h2>Pokedex</h2>
+        <button>Add Pokemon</button>
+    </div>
+    <div class="display"> <!--this is where they live-->
+        <% for (let pokemon in pokedex) { %>
+            <a href="/<%= pokemon %>">
+            <div class="tile">
+                <img src="<%= pokedex[pokemon].img %>" alt="">
+                <div class="gbc">
+                        <div class="pokemon-name"><%= pokedex[pokemon].name %></div>
+                    </div>
+            </div>
+            </a>
+        <% } %>
+    </div>
+</body>
+</html>

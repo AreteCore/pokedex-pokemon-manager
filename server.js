@@ -32,7 +32,7 @@ app.listen(PORT, () => {
 //
 
 //index
-app.get("/pokemon", (req,res) => {
+app.get("/pokedex", (req,res) => {
     res.render('index.ejs', {
         pokedex: pokedex
     })
