@@ -81,12 +81,12 @@ img {
 }
 
 .tileplus {
-    width: calc(var(--tilesize) * 1.6);
-    height: calc(var(--tilesize) * 1.6);
+    width: calc(var(--tilesize) * 2.0);
+    height: calc(var(--tilesize) * 2.0);
 }
 img.tileplus {
-    max-width: calc(var(--tilesize) * 1.4);
-    max-height: calc(var(--tilesize) * 1.4);
+    max-width: calc(var(--tilesize) * 1.8);
+    max-height: calc(var(--tilesize) * 1.8);
 }
 
 .pokemon-name {
@@ -103,7 +103,7 @@ img.tileplus {
 
 .main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 4fr 3fr 3fr;
     column-gap: 1em;
     width: 75%;
     /* background-color: rgb(211, 211, 211); */
@@ -118,7 +118,8 @@ img.tileplus {
     justify-content: center;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 2em 0 3em 0;
+    padding: 2em 2em 3em 2em;
     color: white;
     height: fit-content;
+    border: .2px solid rgb(196, 196, 196);
 }
