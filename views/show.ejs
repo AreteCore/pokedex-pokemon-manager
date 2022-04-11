@@ -5,7 +5,41 @@
 <body>
     <div class="titlebar">
         <h2><%= pokemon.name %></h2>
-        <a href="/"><button>Return to Pokedex</button></a>
+        <a href="/pokedex"><button>Return to Pokedex</button></a>
+    </div>
+    <div class="main">
+        <div>
+            <div class="tile tileplus">
+                <img class="tileplus" src="<%= pokemon.img %>" alt="">
+                <!-- <div class="gbc tileplus">
+                    <img class="gbc-img tileplus" 
+                    src="/static/gbc<%= Math.floor(Math.random()*5) %>.png" 
+                    alt="" srcset="">
+                </div> -->
+            </div>
+            <h2><%= pokemon.name %></h2>
+            <h5>(ID# <%=pokemon.id%>)</h5>
+            <h4>
+                <% let pc = pokemon.misc.classification %>
+                <% let space = pc.indexOf(" ") %>
+                <%= pc.charAt(0).toUpperCase() + pc.slice(1, space) + " " + pc.charAt(space + 1).toUpperCase() + pc.slice(space + 2) %>
+            </h4>
+            <h4>Pokemon Type: 
+                <%= pokemon.type.join(" / ") %>
+            </h4>
+        </div>
+        <div>
+            <h4>Stats:</h4>
+            <% for (let stat in pokemon.stats) { %>
+                <%= stat.toUpperCase() %> : <%= pokemon.stats[stat] %> <br>
+            <%}%>
+        </div>
+        <div>
+            <h4>Damages:</h4>
+            <% for (let stat in pokemon.damages) { %>
+                <%= stat.toUpperCase() %> : <%= pokemon.damages[stat] %> <br>
+            <%}%>
+        </div>
     </div>
 </body>
 </html>
