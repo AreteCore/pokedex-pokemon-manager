@@ -44,3 +44,8 @@ app.get("/pokedex/:id", (req,res) => {
         pokemon: pokedex[req.params.id]
     })
 })
+
+//new
+app.get("/pokedex/new", (req,res) => {
+    res.render("new.ejs")
+})
