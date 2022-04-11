@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    --tilesize: 20vw;
+    --tilesize: 12vw;
     height: 
 }
 
@@ -26,10 +26,16 @@ img {
     border-radius: 20px;
     border: .5px solid black;
     box-shadow: 1px 1px  5px black;
-    background-image: url("/static/gbc.png");
-    background-size:cover;
+    /* background-image: url("/static/gbc.png");
+    background-size:cover; */
     position:absolute;
 }
+.gbc-img {
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 20px;
+}
+
 .titlebar {
     display:flex;
     flex-flow: row nowrap;
@@ -59,10 +65,6 @@ img {
     border-radius: 20px;
     border: .5px solid black;
     box-shadow: 1px 1px  5px black;
-    /* background-image: url("https://cdn.vox-cdn.com/thumbor/2qhGlFjBRJGLjTj6FoMk_hLAT5E=/0x0:1440x812/920x613/filters:focal(662x264:892x494):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/55111827/pokemon_gold.0.jpg");
-    background-size: 150px;
-    background-repeat: no-repeat; */
-    
 }
 
 .pokemon-name {
@@ -70,9 +72,10 @@ img {
     font-weight:bold;
     /* left:10; */
     /* top: 10; */
-    color: white;
+    color: rgb(227, 227, 227);
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
     top: 82%;
     font-family: 'VT323', monospace;
-
+    font-size: calc(var(--tilesize) / 9);
+    
 }
