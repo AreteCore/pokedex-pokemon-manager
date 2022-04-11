@@ -9,7 +9,7 @@
     </div>
     <div class="display"> <!--this is where they live-->
         <% for (let pokemon in pokedex) { %>
-            <a href="/<%= pokemon %>">
+            <a href="/pokedex/<%= pokemon %>">
             <div class="tile">
                 <img src="<%= pokedex[pokemon].img %>" alt="">
                 <div class="gbc">

@@ -2,7 +2,6 @@
 
 :root {
     --tilesize: 12vw;
-    height: 
 }
 
 body {
@@ -10,6 +9,9 @@ body {
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
+    background-image: url("https://i.rtings.com/assets/products/dWM5URbB/sony-a8h-oled/dse-large.jpg");
+    background-position: center;
+    background-attachment: fixed;
 }
 
 img {
@@ -40,7 +42,18 @@ img {
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: 90vw
+    align-items: center;
+    width: 75%;
+    margin-top: .5em;
+    /* font-family: 'VT323', monospace; */
+}
+
+.titlebar * {
+    margin-bottom: 0;
+}
+.titlebar h2 {
+    text-shadow: .5px .5px 2px rgb(223, 223, 223);
+
 }
 
 .display {
