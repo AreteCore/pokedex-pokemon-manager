@@ -123,3 +123,15 @@ img.tileplus {
     height: fit-content;
     border: .2px solid rgb(196, 196, 196);
 }
+
+form {
+    
+}
+
+.narrow-input input[type=text]{
+    width: 3.5em;
+}
+
+.nowrap {
+    white-space:nowrap;
+}

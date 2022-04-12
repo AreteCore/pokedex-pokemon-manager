@@ -22,6 +22,7 @@ app.use(express.urlencoded({
 })) //parses the request out of the url into something express understands
 app.use(morgan("tiny")) //morgan server logging
 app.use("/static", express.static("public")) //enables use of public folders
+app.use(methodOverride("_method"))
 
 //middleware end
 
@@ -41,11 +42,35 @@ app.get("/pokedex", (req,res) => {
 //show
 app.get("/pokedex/:id", (req,res) => {
     res.render('show.ejs', {
-        pokemon: pokedex[req.params.id]
+        pokemon: pokedex[req.params.id],
+        id: req.params.id
     })
 })
 
 //new
 app.get("/pokedex/new", (req,res) => {
     res.render("new.ejs")
+})
+
+//post route goes here
+
+
+
+//delete goes here
+
+
+
+//edit
+app.get("/pokedex/:id/edit", (req, res) => {
+    //render edit.ejs
+    res.render("edit.ejs", {
+        pokemon: pokedex[req.params.id],
+        id: req.params.id
+    })
+})
+
+//update route
+app.put('/pokedex/:id', (req,res) => {
+    pokedex[req.params.id] = req.body
+    res.redirect("/pokedex")
 })

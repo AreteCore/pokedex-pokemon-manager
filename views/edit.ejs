@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<%- include("partials/head.ejs") %>
+
+  <body>
+    <div class="titlebar">
+      <h2>Edit <%= pokemon.name %></h2>
+      <div>
+      <a href="/pokedex"><button>Return to Pokedex</button></a>
+      </div>
+    </div>
+
+    <form class="main" action="/pokedex/<%= id %>?_method=PUT" method="post">
+      <div>
+        <div class="tile tileplus">
+          <img class="tileplus" src="<%= pokemon.img %>" alt="">
+          <!-- <div class="gbc tileplus">
+                    <img class="gbc-img tileplus" 
+                    src="/static/gbc<%= Math.floor(Math.random()*5) %>.png" 
+                    alt="" srcset="">
+                </div> -->
+        </div>
+        <!-- <h2>
+          Name: 
+        </h2> -->
+        Name: <input type="text" name="name" value="<%=pokemon.name%>" />
+        Add a new image URL: <input type="text" name="img" value="<%=pokemon.img%>" />
+        New ID# <input type="text" name="id" value="<%=pokemon.id%>" />
+    
+          Classification:
+          <% let pc=pokemon.misc.classification %>
+            <% let space=pc.indexOf(" ") %>
+               <input type="text" name="classification" value="<%= pc %>"/>
+            
+          Pokemon Type
+              (separate with comma, space): 
+                <input type="text" name="type" value="<%= pokemon.type.join(", ") %>"/>
+        <input type="submit" value="Update" />
+            
+        </div>
+        <div class="narrow-input">
+            <h4>Stats:</h4>
+            <% for (let stat in pokemon.stats) { %>
+              <label><%=stat.toUpperCase()%>: <input size="8" maxlength="2" type="text" name="<%= stat %>" value="<%= pokemon.stats[stat] %>"></label>
+              <%}%>
+              
+        </div>
+        <div class="narrow-input">
+            <h4>Damages:</h4>
+            <% for (let stat in pokemon.damages) { %>
+              <label><%=stat.toUpperCase()%>: <input size="8" maxlength="2" type="text" name="<%= stat %>" value="<%= pokemon.damages[stat] %>"></label>
+              <%}%>
+        </div>
+      </form>
+    
+ </body>
+
+</html>

@@ -5,7 +5,10 @@
 <body>
     <div class="titlebar">
         <h2><%= pokemon.name %></h2>
-        <a href="/pokedex"><button>Return to Pokedex</button></a>
+        <div>
+            <a href="/pokedex/<%= id %>/edit"><button>Edit Pokemon</button></a>
+            <a href="/pokedex"><button>Return to Pokedex</button></a>
+        </div>
     </div>
     <div class="main">
         <div>
@@ -20,6 +23,7 @@
             <h2><%= pokemon.name %></h2>
             <h5>(ID# <%=pokemon.id%>)</h5>
             <h4>
+                Classification:
                 <% let pc = pokemon.misc.classification %>
                 <% let space = pc.indexOf(" ") %>
                 <%= pc.charAt(0).toUpperCase() + pc.slice(1, space) + " " + pc.charAt(space + 1).toUpperCase() + pc.slice(space + 2) %>
