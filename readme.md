@@ -12,3 +12,5 @@ There is a chunk of code in `index.ejs` that effectively randomly chooses the Ga
 Thanks for reading!
 
 R
+
+![pokedex](https://github.com/AreteCore/pokedex-pokemon-manager/blob/master/public/pokedex.png?raw=true)
