@@ -1,7 +1,6 @@
-
-// hello2 = function() {
-//     return "Hello functino expression";
-// }
+//this function takes a req.body and transforms it into 
+//an object that is parseable the way that show.ejs needs,
+//just like an object in the array pokedex.js
 
 module.exports = function(body) {
     let newPoke = {
