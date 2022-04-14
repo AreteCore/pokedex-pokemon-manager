@@ -6,7 +6,9 @@
     <div class="titlebar">
         <!-- <h2>Pokedex</h2> -->
         <img src="https://raw.githubusercontent.com/sleduardo20/pokedex/0671af442dff1d8f7141e49eb83b438885bbc9e9/public/img/logo.svg" alt="" srcset="">
-        <button>Add Pokemon</button>
+        <a href="pokedex/new">
+            <button>Add Pokemon</button>
+        </a>
     </div>
     <div class="display"> <!--this is where they live-->
         <% for (let pokemon in pokedex) { %>
@@ -18,7 +20,7 @@
                     src="/static/gbc<%= Math.floor(Math.random()*5) %>.png" 
                     alt="" srcset="">
                         <div class="pokemon-name"><%= pokedex[pokemon].name %></div>
-                    </div>
+                </div>
             </div>
             </a>
         <% } %>
