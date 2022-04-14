@@ -9,6 +9,8 @@ The little gameboy screens on each one are actually sections with opacity at 0, 
 
 There is a chunk of code in `index.ejs` that effectively randomly chooses the Gameboy for each Pokemon when populating the page.
 
+Also I must say I am proud of a bit of magic called `pokemonCreator`, a function that takes `req.body` as a parameter and transforms it into an object formatted in the same way as one of the pokemon in the source data. You can find that in `/models/pokemonCreator.js`
+
 Thanks for reading!
 
 R
