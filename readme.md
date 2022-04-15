@@ -11,6 +11,8 @@ There is a chunk of code in `index.ejs` that randomly chooses the Gameboy from o
 
 Also I must say I am proud of a bit of magic called `pokemonCreator`, a function that takes `req.body` as a parameter and transforms it into an object formatted in the same way as one of the pokemon in the source data. You can find that in `/models/pokemonCreator.js`
 
+The page is also responsive. It has *@media* queries. Resize the window to see!
+
 Thanks for reading!
 
 R
