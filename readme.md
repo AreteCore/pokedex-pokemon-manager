@@ -15,4 +15,4 @@ Thanks for reading!
 
 R
 
-![pokedex](https://github.com/AreteCore/pokedex-pokemon-manager/blob/master/public/pokedex.png?raw=true)
+![pokedex](https://github.com/AreteCore/pokedex-pokemon-manager/blob/master/public/pokedex_img.png?raw=true)
