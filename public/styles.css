@@ -1,22 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+    
 :root {
-    --tilesize: 14vw;
-}
+        --tilesize: 20vw;
+    }
+
+@media (max-width: 900px) {
+    :root {
+        --tilesize: 28vw;
+    }
+ }
+
+@media (max-width: 640px) {
+    :root {
+        --tilesize: 40vw;
+    }
+ }
 
 body {
-    background-color:slategrey;
+    background-color:#ffffff;
     display:flex;
     flex-flow: column nowrap;
     align-items: center;
-    background-image: url("https://i.rtings.com/assets/products/dWM5URbB/sony-a8h-oled/dse-large.jpg");
-    background-position: center;
-    background-attachment: fixed;
+    /* background-image: url("https://i.rtings.com/assets/products/dWM5URbB/sony-a8h-oled/dse-large.jpg"); */
+    /* background-position: center; */
+    /* background-attachment: fixed; */
 }
 
 img {
-    max-width: calc(var(--tilesize) / 2);
-    max-height: calc(var(--tilesize) / 2);
+    max-width: var(--tilesize)
+}
+
+.white-wrap > img {
+    max-width: calc(var(--tilesize) / 1.9);
+    max-height: calc(var(--tilesize) / 1.9);
     /* display:none; */
 }
 .gbc {
@@ -25,9 +41,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    border: .5px solid black;
-    box-shadow: 1px 1px  5px black;
+    /* border-radius: 20px; */
+    /* border: .5px solid black; */
+    /* box-shadow: 1px 1px  5px black; */
     /* background-image: url("/static/gbc.png");
     background-size:cover; */
     position:absolute;
@@ -35,7 +51,12 @@ img {
 .gbc-img {
     min-width: 100%;
     min-height: 100%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
+    box-shadow: 0px 2px  1px grey;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .titlebar {
@@ -68,7 +89,7 @@ img {
 
 }
 
-.tile {
+.tile-original {
     width: var(--tilesize);
     height: var(--tilesize);
     background-color: white;
@@ -78,6 +99,30 @@ img {
     border-radius: 20px;
     border: .5px solid black;
     box-shadow: 1px 1px  5px black;
+}
+
+.tile-new {
+    width: var(--tilesize);
+    height: var(--tilesize);
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom-left-radius: 10px; */
+    /* border-bottom-right-radius: 10px */
+    /* border: .5px solid black; */
+    /* box-shadow: 1px 1px  5px black; */
+}
+
+.white-wrap {
+    width: calc(var(--tilesize) / 1.6);
+    height: calc(var(--tilesize) / 1.6);
+    background-color: white;
+    position: relative;
+    top:-.5em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tileplus {

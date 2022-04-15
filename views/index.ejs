@@ -13,8 +13,10 @@
     <div class="display"> <!--this is where they live-->
         <% for (let pokemon in pokedex) { %>
             <a href="/pokedex/<%= pokemon %>">
-            <div class="tile">
-                <img src="<%= pokedex[pokemon].img %>" alt="">
+            <div class="tile-new">
+                <div class="white-wrap">
+                    <img src="<%= pokedex[pokemon].img %>" alt="">
+                </div>
                 <div class="gbc">
                     <img class="gbc-img" 
                     src="/static/gbc<%= Math.floor(Math.random()*5) %>.png" 
