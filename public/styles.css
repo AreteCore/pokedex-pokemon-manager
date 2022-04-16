@@ -126,12 +126,14 @@ img {
 }
 
 .tileplus {
-    width: calc(var(--tilesize) * 1.5);
-    height: calc(var(--tilesize) * 1.5);
+    width: calc(var(--tilesize) * 1.8);
+    height: calc(var(--tilesize) * 1.8);
+    background-color: white;
+    border-radius: 5px;
 }
-img.tileplus {
-    max-width: calc(var(--tilesize) * 1.2);
-    max-height: calc(var(--tilesize) * 1.2);
+img.tileshow {
+    max-width: calc(var(--tilesize) * 1.8);
+    max-height: calc(var(--tilesize) * 1.8);
 }
 
 .pokemon-name {
