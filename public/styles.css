@@ -126,12 +126,12 @@ img {
 }
 
 .tileplus {
-    width: calc(var(--tilesize) * 2.0);
-    height: calc(var(--tilesize) * 2.0);
+    width: calc(var(--tilesize) * 1.5);
+    height: calc(var(--tilesize) * 1.5);
 }
 img.tileplus {
-    max-width: calc(var(--tilesize) * 1.8);
-    max-height: calc(var(--tilesize) * 1.8);
+    max-width: calc(var(--tilesize) * 1.2);
+    max-height: calc(var(--tilesize) * 1.2);
 }
 
 .pokemon-name {
