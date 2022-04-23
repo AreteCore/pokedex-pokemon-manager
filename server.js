@@ -50,8 +50,6 @@ app.get("/pokedex/new", (req, res) => {
 // //post route
 app.post("/pokedex", (req, res) => {
   // console.log(req.body)
-  req.body.readyToEat = !!req.body.readyToEat;
-  // console.log(req.body)
   pokedex.unshift(pokemonCreator(req.body));
   res.redirect("/pokedex");
 });
